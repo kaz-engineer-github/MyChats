@@ -7,5 +7,6 @@ target 'MyChats' do
 
   # Pods for MyChats
   pod 'CLTypingLabel', '~> 0.4.0'
-
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 end
