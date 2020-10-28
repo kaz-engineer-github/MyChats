@@ -19,6 +19,7 @@
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
 		5814954B76C100C206EAB296 /* Pods_MyChats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFA9FBF54563EBB4F7FEFF9 /* Pods_MyChats.framework */; };
 		745F99132547F29800D2FFAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 745F99122547F29800D2FFAA /* GoogleService-Info.plist */; };
+		745F993E254936D600D2FFAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F993D254936D600D2FFAA /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0B62819D235F0F4D00E35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2BFA9FBF54563EBB4F7FEFF9 /* Pods_MyChats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyChats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		745F99122547F29800D2FFAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		745F993D254936D600D2FFAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C9D1934F52886C5F633DE39F /* Pods-MyChats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyChats.release.xcconfig"; path = "Target Support Files/Pods-MyChats/Pods-MyChats.release.xcconfig"; sourceTree = "<group>"; };
 		EC52EB10244AD99CEB8A5FE1 /* Pods-MyChats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyChats.debug.xcconfig"; path = "Target Support Files/Pods-MyChats/Pods-MyChats.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +78,7 @@
 			children = (
 				0B628176235DEE8100E35CAF /* AppDelegate.swift */,
 				0B628178235DEE8100E35CAF /* SceneDelegate.swift */,
-				0B628194235DF03A00E35CAF /* Models */,
+				745F993C254936BC00D2FFAA /* Model */,
 				0B628193235DF03400E35CAF /* Views */,
 				0B628192235DF02000E35CAF /* Controllers */,
 				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
@@ -106,19 +108,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0B628194235DF03A00E35CAF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		56A3641DC5D786443E1ED22D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				2BFA9FBF54563EBB4F7FEFF9 /* Pods_MyChats.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		745F993C254936BC00D2FFAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				745F993D254936D600D2FFAA /* Constants.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C9619669AAB7D19B07A7CC34 /* Pods */ = {
@@ -251,6 +254,7 @@
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
+				745F993E254936D600D2FFAA /* Constants.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,
 				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
 			);
