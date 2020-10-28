@@ -20,6 +20,7 @@
 		5814954B76C100C206EAB296 /* Pods_MyChats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFA9FBF54563EBB4F7FEFF9 /* Pods_MyChats.framework */; };
 		745F99132547F29800D2FFAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 745F99122547F29800D2FFAA /* GoogleService-Info.plist */; };
 		745F993E254936D600D2FFAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F993D254936D600D2FFAA /* Constants.swift */; };
+		745F994225493AC200D2FFAA /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F994125493AC200D2FFAA /* Messages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		2BFA9FBF54563EBB4F7FEFF9 /* Pods_MyChats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyChats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		745F99122547F29800D2FFAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		745F993D254936D600D2FFAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		745F994125493AC200D2FFAA /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		C9D1934F52886C5F633DE39F /* Pods-MyChats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyChats.release.xcconfig"; path = "Target Support Files/Pods-MyChats/Pods-MyChats.release.xcconfig"; sourceTree = "<group>"; };
 		EC52EB10244AD99CEB8A5FE1 /* Pods-MyChats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyChats.debug.xcconfig"; path = "Target Support Files/Pods-MyChats/Pods-MyChats.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				745F993D254936D600D2FFAA /* Constants.swift */,
+				745F994125493AC200D2FFAA /* Messages.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
+				745F994225493AC200D2FFAA /* Messages.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
