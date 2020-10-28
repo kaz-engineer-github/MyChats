@@ -87,6 +87,7 @@
 				0B628181235DEE8400E35CAF /* LaunchScreen.storyboard */,
 				0B628184235DEE8400E35CAF /* Info.plist */,
 				745F99122547F29800D2FFAA /* GoogleService-Info.plist */,
+				745F993D254936D600D2FFAA /* Constants.swift */,
 			);
 			path = MyChats;
 			sourceTree = "<group>";
@@ -121,7 +122,6 @@
 		745F993C254936BC00D2FFAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				745F993D254936D600D2FFAA /* Constants.swift */,
 				745F994125493AC200D2FFAA /* Messages.swift */,
 			);
 			path = Model;
