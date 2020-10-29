@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="Tim-3B-f4n" customClass="WelcomeViewController" customModule="MyChats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H86-OM-sMN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWe-nW-2HB">
-                                <rect key="frame" x="0.0" y="562" width="375" height="61"/>
+                                <rect key="frame" x="0.0" y="713" width="414" height="61"/>
                                 <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="0.70371361301369861" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="SnA-Gb-m65"/>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌤MyChats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7D-jv-BlJ">
-                                <rect key="frame" x="20" y="281.5" width="335" height="60"/>
+                                <rect key="frame" x="20" y="374" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ph1-wX-D3a"/>
                                 </constraints>
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2x-tz-C9Y">
-                                <rect key="frame" x="0.0" y="506" width="375" height="48"/>
+                                <rect key="frame" x="0.0" y="657" width="414" height="48"/>
                                 <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="0.30104880136986301" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="qxQ-xP-pdb"/>
@@ -358,8 +358,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UGv-Zy-Z8T">
-                                <rect key="frame" x="87.5" y="50" width="200" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="UGv-Zy-Z8T">
+                                <rect key="frame" x="87.5" y="20" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="PoG-k3-VlD"/>
                                     <constraint firstAttribute="height" constant="200" id="pEf-c0-f08"/>
@@ -372,9 +372,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="42"/>
                                         <color key="backgroundColor" red="0.72051155570000003" green="1" blue="0.57245248559999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
-                                        <state key="normal" title="Change Icon">
+                                        <state key="normal" title="Setting">
                                             <color key="titleColor" name="BrandBlue"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setting:" destination="H9b-kk-puL" eventType="touchUpInside" id="I9p-xu-j48"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHE-1F-9pZ">
                                         <rect key="frame" x="0.0" y="62" width="335" height="42"/>
@@ -397,18 +400,29 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome MyChats! This is your profile page. If you want to change your Icon,  press Setting button." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGw-FS-5c3">
+                                <rect key="frame" x="64" y="240" width="247" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wTG-E9-glF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="UGv-Zy-Z8T" firstAttribute="centerX" secondItem="COW-L8-kGq" secondAttribute="centerX" id="81k-zq-gNW"/>
-                            <constraint firstItem="UGv-Zy-Z8T" firstAttribute="top" secondItem="COW-L8-kGq" secondAttribute="top" constant="50" id="ErQ-59-WtF"/>
+                            <constraint firstItem="sGw-FS-5c3" firstAttribute="centerX" secondItem="COW-L8-kGq" secondAttribute="centerX" id="BEX-Hb-TrL"/>
                             <constraint firstItem="Jez-g9-Hop" firstAttribute="leading" secondItem="wTG-E9-glF" secondAttribute="leading" constant="20" id="dZd-Tl-sOa"/>
+                            <constraint firstItem="UGv-Zy-Z8T" firstAttribute="top" secondItem="wTG-E9-glF" secondAttribute="top" constant="20" id="jXp-eX-0zw"/>
                             <constraint firstItem="wTG-E9-glF" firstAttribute="bottom" secondItem="Jez-g9-Hop" secondAttribute="bottom" constant="20" id="p4f-GM-G1n"/>
+                            <constraint firstItem="sGw-FS-5c3" firstAttribute="top" secondItem="UGv-Zy-Z8T" secondAttribute="bottom" constant="20" id="sUJ-AV-GYl"/>
                             <constraint firstItem="wTG-E9-glF" firstAttribute="trailing" secondItem="Jez-g9-Hop" secondAttribute="trailing" constant="20" id="zFI-Nw-Ceu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="🌤Profile" id="iCD-ii-dDW"/>
+                    <connections>
+                        <outlet property="IconImageView" destination="UGv-Zy-Z8T" id="CAD-Wo-YT2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKF-jz-6Hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -443,6 +457,7 @@
         <segue reference="NbU-p2-HKK"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="MeAvatar" width="36" height="36"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="textfield" width="298" height="93"/>
