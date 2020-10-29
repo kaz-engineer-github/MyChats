@@ -20,6 +20,7 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageTextfield.delegate = self
         tableView.dataSource = self
         title = K.appName
         navigationItem.hidesBackButton = true
@@ -70,6 +71,7 @@ class ChatViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         self.messageTextfield.text = ""
+                        self.textFieldShouldReturn(self.messageTextfield)
                     }
                 }
             }
@@ -114,5 +116,12 @@ extension ChatViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+}
+
+extension ChatViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        messageTextfield.resignFirstResponder()
+        return true
     }
 }
