@@ -335,14 +335,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="🌤MyChats" id="Q5u-eL-Bgp">
-                        <barButtonItem key="leftBarButtonItem" image="person.fill" catalog="system" id="Wjs-S9-3no">
+                        <barButtonItem key="rightBarButtonItem" image="person.fill" catalog="system" id="Wjs-S9-3no">
                             <connections>
                                 <segue destination="H9b-kk-puL" kind="show" id="tvp-jO-7bZ"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="GSM-dB-RMU">
-                            <connections>
-                                <action selector="logOut:" destination="lwd-AH-u8E" id="NKw-ub-8OY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -388,6 +383,9 @@
                                         <state key="normal" title="Log Out">
                                             <color key="titleColor" name="BrandPurple"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logOut:" destination="H9b-kk-puL" eventType="touchUpInside" id="LeI-DC-MKN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-F3-IRf">
                                         <rect key="frame" x="0.0" y="124" width="335" height="42"/>
