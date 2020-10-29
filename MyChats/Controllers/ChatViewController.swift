@@ -46,6 +46,8 @@ class ChatViewController: UIViewController {
                             
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1 , section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                             }
                         }
                     }
@@ -62,9 +64,13 @@ class ChatViewController: UIViewController {
                 K.FStore.dateField: Date()
             ]) { (error) in
                 if let e = error {
-                  print("firestore has problem \(e)")
+                    print("firestore has problem \(e)")
                 } else {
                     print("success to save data")
+                    
+                    DispatchQueue.main.async {
+                        self.messageTextfield.text = ""
+                    }
                 }
             }
         }
