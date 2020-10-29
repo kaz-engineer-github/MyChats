@@ -86,8 +86,27 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        cell.contentsLabel.text = messages[indexPath.row].body
+        cell.contentsLabel.text = message.body
+        
+        // MARK: message from you
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.youImageView.isHidden = true
+            cell.myImageView.isHidden = false
+            cell.contentsView.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
+            cell.contentsLabel.textColor = UIColor(named: K.BrandColors.purple)
+        }
+        
+        // MARK: message from another user
+        else {
+            cell.youImageView.isHidden = false
+            cell.myImageView.isHidden = true
+            cell.contentsView.backgroundColor = UIColor(named: K.BrandColors.purple)
+            cell.contentsLabel.textColor = UIColor(named: K.BrandColors.lightPurple)
+        }
+        
         return cell
     }
 }
