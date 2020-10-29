@@ -23,6 +23,7 @@
 		745F994225493AC200D2FFAA /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F994125493AC200D2FFAA /* Messages.swift */; };
 		745F99462549433F00D2FFAA /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F99442549433F00D2FFAA /* MessageCell.swift */; };
 		745F99472549433F00D2FFAA /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745F99452549433F00D2FFAA /* MessageCell.xib */; };
+		74A2FB6F254AC15A00649746 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A2FB6E254AC15A00649746 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		745F994125493AC200D2FFAA /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		745F99442549433F00D2FFAA /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		745F99452549433F00D2FFAA /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		74A2FB6E254AC15A00649746 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C9D1934F52886C5F633DE39F /* Pods-MyChats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyChats.release.xcconfig"; path = "Target Support Files/Pods-MyChats/Pods-MyChats.release.xcconfig"; sourceTree = "<group>"; };
 		EC52EB10244AD99CEB8A5FE1 /* Pods-MyChats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyChats.debug.xcconfig"; path = "Target Support Files/Pods-MyChats/Pods-MyChats.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 				0B62818C235DF00B00E35CAF /* RegisterViewController.swift */,
 				0B62818E235DF01000E35CAF /* LoginViewController.swift */,
 				0B628190235DF01B00E35CAF /* ChatViewController.swift */,
+				74A2FB6E254AC15A00649746 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			files = (
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
 				745F994225493AC200D2FFAA /* Messages.swift in Sources */,
+				74A2FB6F254AC15A00649746 /* ProfileViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
