@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     @IBOutlet weak var IconImageView: UIImageView!
     let userdefault = UserDefaults.standard
+    var alertController: UIAlertController!
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,5 +100,26 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
+    }
+  
+    @IBAction func deleteAccount(_ sender: Any) {
+        Auth.auth().currentUser?.delete { error in
+            if let e = error {
+                print("error\(e)")
+                
+            } else {
+                print("// Account deleted.")
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        }
+        self.alert(title: "delete your account", message: "already done")
+    }
+      
+  
+    // MARK: alert function
+    func alert(title:String, message:String) {
+        alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true)
     }
 }
