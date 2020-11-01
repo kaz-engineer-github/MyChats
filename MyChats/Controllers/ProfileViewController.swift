@@ -39,6 +39,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         switch photoAuthorizationStatus {
             case .authorized:
                 print("auth")
+                let sourceType:UIImagePickerController.SourceType = UIImagePickerController.SourceType.photoLibrary
+                if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+                    let cameraPicker = UIImagePickerController()
+                    cameraPicker.sourceType = sourceType
+                    cameraPicker.delegate = self
+                    self.present(cameraPicker, animated: true, completion: nil)
+                }
             case .notDetermined:
                 PHPhotoLibrary.requestAuthorization({
                 (newStatus) in
@@ -56,17 +63,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 print("limited")
             @unknown default:
                 print("default")
-        }
-      
-        // MARK: open Album
-        let sourceType:UIImagePickerController.SourceType = UIImagePickerController.SourceType.photoLibrary
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
-            let cameraPicker = UIImagePickerController()
-            cameraPicker.sourceType = sourceType
-            cameraPicker.delegate = self
-            self.present(cameraPicker, animated: true, completion: nil)
-        } else {
-            print("error occured")
         }
     }
     
