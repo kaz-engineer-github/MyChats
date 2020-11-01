@@ -19,6 +19,9 @@ DerivedData
 !default.perspectivev3
 
 #ビルドのカスタムscheme（ロケーション等）
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata
 xcuserdata
 
 # 手動で廃止（deprecate）したクラスのファイルがここへ移動する（同じ名前のクラスを定義しようとしたときなど）
