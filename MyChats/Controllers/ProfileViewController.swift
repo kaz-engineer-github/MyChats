@@ -17,6 +17,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        IconImageView.contentMode = .scaleAspectFill
+        IconImageView.clipsToBounds = true
+        IconImageView.layer.cornerRadius = IconImageView.frame.height / 2.0
+        self.view.addSubview(IconImageView)
     }
   
     override func viewWillAppear(_ animated: Bool) {

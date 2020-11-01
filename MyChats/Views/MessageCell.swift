@@ -19,6 +19,9 @@ class MessageCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         contentsView.layer.cornerRadius = contentsView.frame.size.height / 5
+        myImageView.contentMode = .scaleAspectFill
+        myImageView.clipsToBounds = true
+        myImageView.layer.cornerRadius = myImageView.frame.height / 2.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
