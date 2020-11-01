@@ -13,6 +13,7 @@ class ChatViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
+    let userdefault = UserDefaults.standard
   
     let db = Firestore.firestore()
   
@@ -26,6 +27,11 @@ class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         fetchMessages()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
   
     func fetchMessages() {
@@ -90,6 +96,10 @@ extension ChatViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         cell.contentsLabel.text = message.body
         
+        if userdefault.object(forKey: "key") != nil {
+            cell.myImageView.image = readimage()
+        }
+        
         // MARK: message from you
         if message.sender == Auth.auth().currentUser?.email {
             cell.youImageView.isHidden = true
@@ -107,6 +117,12 @@ extension ChatViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+    
+    func readimage() -> UIImage {
+        let data:NSData = userdefault.object(forKey: "key") as! NSData
+        let savedData = UIImage(data: data as Data)
+        return savedData!
     }
 }
 
