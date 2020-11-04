@@ -1,28 +1,36 @@
-![App Brewery Banner](Documentation/AppBreweryBanner.png)
+# MyChats
 
-# Flash-Chat
+## What MyChats ?
 
-## Our Goal
+This is chat application. You can register or login with  your account, then can chat orher users. 
+There is only one chat room so you can see all messages other users sent. 
 
-One of the most fundamental component of modern iOS apps is the Table View. Table Views are used everywhere from the Mail app to the Messages app. It’s a crucial part of every iOS developer’s tool belt. In this tutorial we’ll be getting to grips with Table Views, creating custom cells, and making our own cloud-based backend database. It’s going to be epic, so buckle up.
+## Function
 
-## What you will create
+* Splash animation
+* Register function
+* Login, Logout function
+* Chat function
+* Set your Icon function
+* Delete account function
 
-Flash Chat is an internet based messaging app similar to WhatsApp, the popular messaging app that was bought by Facebook for $22 billion. We will be using a service called Firebase Firestore as a backend database to store and retrieve our messages from the cloud. 
+## FunctionEnviroment
 
-## What you will learn
+* Xcode 12.1
+* Swift 5.3
+* CocoaPods 1.9.3
+* Firebase
+* FirebaseAuth
+* CloudFirestore
+* IQKeyboardManagerSwift 6.5.0
+* platform iOS 13.0
 
-* How to integrate third party libraries in your app using Cocoapods and Swift Package Manager.
-* How to store data in the cloud using Firebase Firestore.
-* How to query and sort the Firebase database.
-* How to use Firebase for user authentication, registration and login.
-* How to work with UITableViews and how to set their data sources and delegates.
-* How to create custom views using .xib files to modify native design components.
-* How to embed View Controllers in a Navigation Controller and understand the navigation stack.
-* How to create a constants file and use static properties to store Strings and other constants.
-* Learn about Swift loops and create animations using loops.
-* Learn about the App Lifecycle and how to use viewWillAppear or viewWillDisappear.
-* How to create direct Segues for navigation.
+## Note
+
+* Only you can see other users Icon is same avatar.
+* App is slow. There may be some reason, one is set Icon through Userdefault. 
+
+So please give me time for a while, I will solve these problen. 
 
 
 # Constants
@@ -47,9 +55,4 @@ struct K {
         static let dateField = "date"
     }
 }
-
 ```
-
->This is a companion project to The App Brewery's Complete App Developement Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
-
-![End Banner](Documentation/readme-end-banner.png)
