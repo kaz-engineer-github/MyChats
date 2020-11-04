@@ -372,7 +372,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="42"/>
                                         <color key="backgroundColor" red="0.72051155570000003" green="1" blue="0.57245248559999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
-                                        <state key="normal" title="Setting">
+                                        <state key="normal" title="Change Icon">
                                             <color key="titleColor" name="BrandBlue"/>
                                         </state>
                                         <connections>
@@ -398,7 +398,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="deleteAccount:" destination="H9b-kk-puL" eventType="touchUpInside" id="9Sx-ee-0Mx"/>
+                                            <action selector="dispAlert:" destination="H9b-kk-puL" eventType="touchUpInside" id="wva-PK-42W"/>
                                         </connections>
                                     </button>
                                 </subviews>
