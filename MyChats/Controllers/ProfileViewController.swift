@@ -102,21 +102,37 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
   
-    @IBAction func deleteAccount(_ sender: Any) {
-        Auth.auth().currentUser?.delete { error in
-            if let e = error {
-                print("error\(e)")
-                
-            } else {
-                print("// Account deleted.")
-                self.navigationController?.popToRootViewController(animated: true)
-            }
-        }
-        self.alert(title: "delete your account", message: "already done")
-    }
+    // MARK: comfirm alert function. If tap OK, user account delete.
+    @IBAction func dispAlert(_ sender: Any) {
+        
+        let alert: UIAlertController = UIAlertController(title: "delete your account", message: "OK？", preferredStyle:  UIAlertController.Style.alert)
+        
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                (action: UIAlertAction!) -> Void in
+                print("OK")
+                Auth.auth().currentUser?.delete { error in
+                    if let e = error {
+                        print("error\(e)")
+                        self.alert(title: "Error", message: "can't delte your account. Please do again.")
+                    } else {
+                        print("// Account deleted.")
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }
+                }
+            })
       
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler:{
+                (action: UIAlertAction!) -> Void in
+                print("Cancel")
+            })
+        
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
   
-    // MARK: alert function
+    // MARK: Error alert
     func alert(title:String, message:String) {
         alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
